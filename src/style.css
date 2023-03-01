@@ -1,0 +1,138 @@
+:root {
+
+    --light-red: hsl(0, 100%, 67%);
+    --light-red-op: hsla(0, 100%, 67%, 0.1);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --orange-yellow-op: hsla(39, 100%, 56%, 0.1);
+    --green-teal: hsl(166, 100%, 37%);
+    --green-teal-op: hsla(166, 100%, 37%, 0.1);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --cobalt-blue-op: hsla(234, 85%, 45%, 0.1);
+
+    /*gradients background*/
+
+    --light-s-blue: hsl(252, 100%, 67%);
+    --light-r-blue: hsl(241, 81%, 54%);
+
+    /*gradients circle*/
+
+    --violet-blue: hsla(256, 72%, 46%, 0.1);
+    --persian-blue: hsla(241, 72%, 46%, 1);
+
+    /*neutral*/
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+
+    min-height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.result {
+
+    background: linear-gradient(200deg, var(--light-s-blue) 6%, var(--light-r-blue) 80%);
+    border-radius: 0 0 10% 10%;
+}
+
+.result h2, .resultOver, #resultContent {
+
+    color: var(--light-lavender);
+}
+
+.result__numbers {
+
+    background: linear-gradient(180deg, var(--persian-blue) 36%, var(--violet-blue) 100%);
+    width: 9.4em;
+}
+
+#resultTotal {
+
+    font-size: 3.6em;
+}
+
+#reactionColor {
+
+    background-color: var(--light-red-op);
+}
+
+#memoryColor {
+
+    background-color: var(--orange-yellow-op);
+}
+
+#verbalColor {
+
+    background-color: var(--green-teal-op);
+}
+
+#visualColor {
+
+    background-color: var(--cobalt-blue-op);
+}
+
+.summaryContent__reaction {
+
+    color: var(--light-red);
+}
+
+.summaryContent__memory {
+
+    color: var(--orange-yellow);
+}
+
+.summaryContent__verbal {
+
+    color: var(--green-teal);
+}
+
+.summaryContent__visual {
+
+    color: var(--cobalt-blue);
+}
+
+button {
+
+    padding: 0.8em 0;
+    font-size: 1.1em;
+    background-color: var(--dark-gray-blue);
+    transition: .3s;
+}
+
+button:hover {
+
+    background: linear-gradient(200deg, var(--light-s-blue) 6%, var(--light-r-blue) 80%);
+    transition: .3s;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+
+    /* body {
+
+        background-color: var(--pale-blue);
+    } */
+    
+    .result {
+
+        position: relative;
+        left: 2em;
+        z-index: 1;
+        width: 38%;
+        border-radius: 10% 10% 10% 10%;
+    }
+
+    .summary {
+
+        padding: 1.2em 2em 1.2em 4em;
+        width: 40%;
+        border-radius: 0 10% 10% 0;
+        background-color: var(--white);
+        box-shadow: 0 4px 12px 8px var(--pale-blue);
+    }
+
+}
